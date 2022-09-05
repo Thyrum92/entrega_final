@@ -1,0 +1,192 @@
+/** Estructura **/
+$colorNav: yellowgreen;
+$naranja: darkorange;
+
+@mixin tamaño ($ancho,$alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+.borde {
+    border: solid 3px;
+    border-radius: 3px;
+}
+
+.bordeBoton {
+    @extend .borde;
+    background-color: $naranja;
+}
+@media (min-width: 360px) and (max-width: 599px) {
+
+    /*** General - Header ***/
+
+    .caja {
+        margin: 0 15px 0 0;
+        @include tamaño (100%,100%)
+    }
+    
+    .cajaSub {
+        margin: 10px 0 0 50px;
+    }
+    
+    .sinPunto {
+        list-style-type: none;
+        font-size: 12px;
+    }
+    
+
+    /* Main - Index */
+
+    .marginNew {
+        margin: 10px;
+    }
+
+    /*** productos ***/
+
+    .divM {
+        margin: 10px 0 0 30px;
+    }
+
+    /*** Productos Sin Tacc ***/
+
+    .divM {
+        margin: 30px;
+    }
+    .center {
+        text-align: center;
+        padding: 0 0 30px 0;
+    }
+    
+    .marginFlex {
+        margin: 0 0 0 5px;
+    }
+
+    /*** Contacto ***/
+
+    .margin5 {
+        margin: 5px 0 0 0px;
+       }
+       .marginC {
+           margin: -15px 0 0 0;
+       }
+    }
+@media (min-width: 600px) and (max-width: 1199px) {
+
+/*** General - Header ***/
+  
+.caja {
+    margin: 0 15px 0 0;
+    @include tamaño(100%,100% )
+}
+
+.cajaSub {
+    margin: 10px 0 0 50px;
+}
+
+.sinPunto {
+    list-style-type: none;
+    font-size: 12px;
+}
+
+/* Main - Index */
+
+.marginNew {
+    margin: 10px;
+}
+
+/*** productos ***/
+
+.divM {
+    margin: 10px 0 0 30px;
+}
+
+/*** Productos Sin Tacc ***/
+
+.divM {
+    margin: 30px;
+}
+
+.center {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+.marginFlex {
+    margin: 0 0 0 5px;
+}
+
+/*** Contacto ***/
+
+.margin5 {
+    margin: 5px 0 0 0px;
+   }
+   .marginC {
+       margin: -15px 0 0 0;
+   }
+
+}
+
+@media (min-width: 1200px) {
+
+/*** General - Header ***/
+
+.caja {
+    margin: 0 15px 0 0;
+    @include tamaño(100%,100% );
+    text-shadow: 2px 2px 2px black;
+}
+
+.cajaSub {
+    margin: 10px 0 0 100px;
+}
+
+.sinPunto {
+    list-style-type: none;
+}
+
+/* Main - Index */
+
+
+.marginNew {
+    margin: 10px;
+}
+
+/*** productos ***/
+
+.divM {
+    margin: 10px 0 0 60px;
+}
+
+/*** Productos Sin Tacc ***/
+
+.divM {
+    margin: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.marginFlex {
+    margin: 0 0 0 5px;
+}
+
+/*** Contacto ***/
+
+.margin5 {
+    margin: 5px 0 0 0px;
+   }
+   .marginC {
+       margin: -15px 0 0 0;
+   }
+
+/*** Quienes Somos ***/
+
+.marginP1 {
+    margin: 45px 0 10px 45px;
+}
+.marginP2 {
+    margin: 100px 0 45px 45px;
+}
+
+}

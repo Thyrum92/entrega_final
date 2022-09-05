@@ -1,0 +1,80 @@
+$naranja: darkorange;
+$rojo: darkred;
+$limon: greenyellow;
+
+@mixin tamaño ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+.nav {
+    background-color: $rojo;
+    height: 80px;
+}
+
+.nav_logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.nav_container {
+    display: flex;
+    @include tamaño (90%,100%);
+    margin: 0, auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_label, .nav_input {
+    display: none;
+}
+.nav_menu {
+    display: grid;
+    grid-auto-flow: column;
+    height: 80%;
+    gap: 3em;
+}
+.nav_item {
+    color: $limon;
+    font-weight: bold;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.nav_item::after {
+    content: "" ;
+    display: block;
+    background-color: white;
+    @include tamaño(90%, 3px );
+    margin-top: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+.nav_item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+
+@media (max-width: 599px) {
+    .nav_label {
+        display: block;
+        cursor: pointer;
+    }
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background-color: $naranja;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav_input:checked + .nav_menu {
+        background-color: $naranja;
+        clip-path: circle(100% at center);
+    }
+}

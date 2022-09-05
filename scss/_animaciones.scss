@@ -1,0 +1,120 @@
+/** Animaciones **/
+$hoverMenu: blue;
+$naranjaOscuro: darkorange;
+
+.bordeBoton:hover {
+    font-weight: bold;
+}
+.sinDeco:hover {
+    font-weight: bold;
+    color: blue;
+} 
+
+@media (min-width: 360px) and (max-width: 599px) {
+    /*** Productos Sin Tacc ***/
+
+.fontRec:hover {
+    color: $hoverMenu;
+    text-shadow: 3px;
+}
+
+.tituloAnimado {
+    animation-name: titulo;
+    animation-duration: 1s;
+}
+
+@keyframes titulo {
+    from {
+        transform: translateX(700px);
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+
+.subTitAnimado {
+    animation-name: subtitulo;
+    animation-duration: 1s;
+}
+
+@keyframes subtitulo {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+}
+
+@media (min-width: 600px) and (max-width: 1199px) {
+
+    .fontRec:hover {
+        color: $hoverMenu;
+        text-shadow: 3px;
+    }   
+
+    .tituloAnimado {
+        animation-name: titulo;
+        animation-duration: 1s;
+    }
+    
+    @keyframes titulo {
+        from {
+            transform: translateX(1300px);
+        }
+        to {
+            transform: translateX(0px)
+        }
+    }
+    
+    .subTitAnimado {
+        animation-name: subtitulo;
+        animation-duration: 1s;
+    }
+    
+    @keyframes subtitulo {
+        from {
+            transform: translateX(-500px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+.fontRec:hover {
+    color: $hoverMenu;
+    text-shadow: 3px;
+}  
+.tituloAnimado {
+    animation-name: titulo;
+    animation-duration: 1s;
+}
+
+@keyframes titulo {
+    from {
+        transform: translateX(2000px);
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+
+.subTitAnimado {
+    animation-name: subtitulo;
+    animation-duration: 1s;
+}
+
+@keyframes subtitulo {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+}

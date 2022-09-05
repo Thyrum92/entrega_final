@@ -1,0 +1,100 @@
+/** Tipografia **/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap');
+$alturaLetra: 22px;
+$colorUno: whitesmoke;
+
+$mapa1: (
+    Prox: $colorUno,
+    Rec: $colorUno,
+);
+
+$mapa2: (
+    TitArticle: $alturaLetra - 4px,
+    Parrafo: $alturaLetra - 6px
+);
+.sinDeco {
+    text-decoration: none;
+}
+
+
+
+@media (min-width: 360px) and (max-width: 599px)
+{
+h1 {
+    font-size: $alturaLetra;
+}
+h2 { 
+    font-size: $alturaLetra - 2px;
+}
+h3 {
+    font-size: $alturaLetra - 8px;
+}
+h4 {
+    font-size: $alturaLetra - 10px;
+}
+h5 {
+    font-size: $alturaLetra - 14px;
+}
+
+@each $clase, $valor in $mapa1 {
+    .font#{$clase} {
+        color: $valor;
+    }
+}
+
+@each $clase, $valor in $mapa2 {
+    .letra#{$clase} {
+        font-size: $valor;
+    }
+}
+
+}
+@media (min-width: 600px) and (max-width: 1199px) {
+    h1 {
+        font-size: $alturaLetra;
+    }
+    h2 {
+        font-size: $alturaLetra - 2px;
+    }
+    h3 {
+        font-size: $alturaLetra - 4px;
+    }
+    h4 {
+        font-size: $alturaLetra - 8px;
+    }
+    h5 {
+        font-size: $alturaLetra - 12px;
+    }
+
+    @each $clase, $valor in $mapa1 {
+        .font#{$clase} {
+            color: $valor;
+        }
+    }
+    
+    @each $clase, $valor in $mapa2 {
+        .letra#{$clase} {
+            font-size: $valor;
+        }
+    }
+}
+@media (min-width: 1200px) {
+
+    h3 {
+        font-size: $alturaLetra - 4px;
+    }
+    h4 {
+        font-size: $alturaLetra - 6px;
+    }
+    @each $clase, $valor in $mapa1 {
+        .font#{$clase} {
+            color: $valor;
+        }
+    }
+    
+    @each $clase, $valor in $mapa2 {
+        .letra#{$clase} {
+            font-size: $valor;
+        }
+    }
+}
