@@ -15,10 +15,13 @@ $mapa2: (
 .sinDeco {
     text-decoration: none;
 }
+.textDestacados {
+    font-size: 13px;
+}
 
 
 
-@media (min-width: 360px) and (max-width: 599px)
+@media (max-width: 599px)
 {
 h1 {
     font-size: $alturaLetra;

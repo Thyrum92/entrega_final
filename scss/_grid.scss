@@ -5,7 +5,7 @@ $rojoOscuro: darkred;
 $colorDeFondo: lightgrey;
 $bordeNegro: black;
 
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
 
     .gridHeader {
         display: grid;
@@ -100,7 +100,7 @@ $bordeNegro: black;
     "publi"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 0.35fr;
 }
 
 #galeria {
@@ -131,7 +131,7 @@ $bordeNegro: black;
     "publi publi"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 0.35fr;
 }
 
 #recetas {
@@ -180,7 +180,7 @@ $bordeNegro: black;
 }
     }
 
-    @media (min-width: 600px) and (max-width: 1199px) {
+@media (min-width: 600px) and (max-width: 1199px) {
 
 /*** General - Header ***/
 
@@ -264,15 +264,15 @@ $bordeNegro: black;
     "publi"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 0.5fr;
 }
 
 #galeria {
     grid-area: galeria;
     border: solid $bordeNegro 1.5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 #destacados {
     grid-area: destacados;
@@ -290,13 +290,13 @@ $bordeNegro: black;
 #gridSinTacc {
     display: grid;
     grid-template-areas: 
-    "recetas recetas recetas"
-    "galeria galeria galeria"
-    "destacados destacados destacados"
-    "publi publi publi"
+    "recetas"
+    "galeria"
+    "destacados"
+    "publi"
     ;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr 0.5fr;
 }
 
 #recetas {
@@ -352,7 +352,7 @@ $bordeNegro: black;
 
 .gridHeader {
     display: grid;
-    grid-template-columns: 95px 450px 1300px;
+    grid-template-columns: 95px 450px 1fr;
     grid-template-rows: 100px;
     background-color: $naranjaOscuro;
     justify-content: space-between;
@@ -427,18 +427,18 @@ $bordeNegro: black;
     grid-template-areas: 
     "destacados galeria"
     "destacados galeria"
-    "publi galeria"
+    "publi publi"
     ;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
 }
 
 #galeria {
     grid-area: galeria;
     border: solid $bordeNegro 1.5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 #destacados {
     grid-area: destacados;
@@ -456,12 +456,20 @@ $bordeNegro: black;
 #gridSinTacc {
     display: grid;
     grid-template-areas: 
-    "destacados galeria recetas"
-    "destacados galeria recetas"
-    "publi galeria recetas"
+    "recetas recetas"
+    "destacados galeriaST"
+    "publi publi"
     ;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+}
+
+#galeriaST {
+    grid-area: galeriaST;
+    border: solid $bordeNegro 1.5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #recetas {

@@ -223,7 +223,17 @@
   }
 }
 /** Imagenes **/
-@media (min-width: 360px) and (max-width: 599px) {
+.imgProdDes {
+  width: 200px;
+  height: 200px;
+  border: solid black;
+}
+
+.banner {
+  width: 100%;
+}
+
+@media (max-width: 599px) {
   /*** Index ***/
   .backGround {
     background-image: url("/Imagenes/sin_tacc_background.jpg");
@@ -350,7 +360,11 @@ h5 {
   text-decoration: none;
 }
 
-@media (min-width: 360px) and (max-width: 599px) {
+.textDestacados {
+  font-size: 13px;
+}
+
+@media (max-width: 599px) {
   h1 {
     font-size: 22px;
   }
@@ -429,7 +443,7 @@ h5 {
   }
 }
 /*** Grids ***/
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
   .gridHeader {
     display: grid;
     grid-template-areas: "logo titulo" "spotify spotify";
@@ -506,7 +520,7 @@ h5 {
     display: grid;
     grid-template-areas: "galeria" "destacados" "publi";
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 0.35fr;
   }
   #galeria {
     grid-area: galeria;
@@ -530,7 +544,7 @@ h5 {
     display: grid;
     grid-template-areas: "recetas recetas" "galeria galeria" "destacados destacados" "publi publi";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 0.35fr;
   }
   #recetas {
     grid-area: recetas;
@@ -632,14 +646,14 @@ h5 {
     display: grid;
     grid-template-areas: "galeria" "destacados" "publi";
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 0.5fr;
   }
   #galeria {
     grid-area: galeria;
     border: solid black 1.5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   #destacados {
     grid-area: destacados;
@@ -654,9 +668,9 @@ h5 {
   /*** Productos Sin Tacc ***/
   #gridSinTacc {
     display: grid;
-    grid-template-areas: "recetas recetas recetas" "galeria galeria galeria" "destacados destacados destacados" "publi publi publi";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr 1fr;
+    grid-template-areas: "recetas" "galeria" "destacados" "publi";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr 0.5fr;
   }
   #recetas {
     grid-area: recetas;
@@ -695,7 +709,7 @@ h5 {
   /*** General - Header ***/
   .gridHeader {
     display: grid;
-    grid-template-columns: 95px 450px 1300px;
+    grid-template-columns: 95px 450px 1fr;
     grid-template-rows: 100px;
     background-color: darkorange;
     justify-content: space-between;
@@ -757,16 +771,16 @@ h5 {
   /*** productos ***/
   #gridProd {
     display: grid;
-    grid-template-areas: "destacados galeria" "destacados galeria" "publi galeria";
+    grid-template-areas: "destacados galeria" "destacados galeria" "publi publi";
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
   }
   #galeria {
     grid-area: galeria;
     border: solid black 1.5px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   #destacados {
     grid-area: destacados;
@@ -781,9 +795,16 @@ h5 {
   /*** Productos Sin Tacc ***/
   #gridSinTacc {
     display: grid;
-    grid-template-areas: "destacados galeria recetas" "destacados galeria recetas" "publi galeria recetas";
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "recetas recetas" "destacados galeriaST" "publi publi";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+  }
+  #galeriaST {
+    grid-area: galeriaST;
+    border: solid black 1.5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   #recetas {
     grid-area: recetas;
@@ -819,40 +840,41 @@ h5 {
   }
 }
 /** Flexbox **/
-@media (min-width: 360px) and (max-width: 599px) {
-  /*** Productos Sin Tacc ***/
-  .flexPrecio {
+/*** Productos Sin Tacc ***/
+.flexPrecio {
+  display: flex;
+  flex-direction: row;
+}
+
+/*** Quienes Somos ***/
+.flexQs {
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+}
+
+@media (max-width: 599px) {
+  .flexDestacados {
     display: flex;
-    flex-direction: row;
-  }
-  /*** Quienes Somos ***/
-  .flexQs {
     flex-direction: column;
-    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 70px;
   }
 }
 @media (min-width: 600px) and (max-width: 1199px) {
-  /*** Productos Sin Tacc ***/
-  .flexPrecio {
+  .flexDestacados {
     display: flex;
-    flex-direction: row;
-  }
-  /*** Quienes Somos ***/
-  .flexQs {
     flex-direction: column;
-    -ms-flex-align: center;
+    padding-bottom: 30px;
+    align-items: center;
   }
 }
 @media (min-width: 1200px) {
-  /*** Productos Sin Tacc ***/
-  .flexPrecio {
+  .flexDestacados {
     display: flex;
-    flex-direction: row;
-  }
-  /*** Quienes Somos ***/
-  .flexQs {
     flex-direction: column;
-    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 120px;
   }
 }
 /** Animaciones **/
@@ -865,7 +887,7 @@ h5 {
   color: blue;
 }
 
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
   /*** Productos Sin Tacc ***/
   .fontRec:hover {
     color: blue;

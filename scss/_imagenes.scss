@@ -7,7 +7,17 @@ $LargoImagenProd: 75px;
     width: $ancho;
     height: $alto;
 }
-@media (min-width: 360px) and (max-width: 599px) {
+
+.imgProdDes {
+    @include tamaño( 200px, 200px );
+    border: solid $bordeNegro;
+}
+
+.banner {
+    width: 100%
+}
+
+@media (max-width: 599px) {
 
 /*** Index ***/
    
