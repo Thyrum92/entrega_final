@@ -89,6 +89,11 @@
   border-radius: 3px;
 }
 
+.centradoCaja {
+  display: flex;
+  justify-content: center;
+}
+
 .bordeBoton {
   background-color: darkorange;
 }
@@ -229,10 +234,6 @@
   border: solid black;
 }
 
-.banner {
-  width: 100%;
-}
-
 @media (max-width: 599px) {
   /*** Index ***/
   .backGround {
@@ -245,6 +246,9 @@
   .imgDim {
     width: 75px;
     height: 75px;
+  }
+  .banner {
+    width: 100%;
   }
   /*** Productos Sin Tacc ***/
   .imgProd {
@@ -282,6 +286,9 @@
     width: 75px;
     height: 75px;
   }
+  .banner {
+    width: 95%;
+  }
   /*** Productos Sin Tacc ***/
   .imgProd {
     width: 200px;
@@ -317,6 +324,9 @@
   .imgDim {
     width: 75px;
     height: 75px;
+  }
+  .banner {
+    width: 40%;
   }
   /*** Productos Sin Tacc ***/
   .imgProd {

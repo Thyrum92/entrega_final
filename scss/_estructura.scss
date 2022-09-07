@@ -12,6 +12,11 @@ $naranja: darkorange;
     border-radius: 3px;
 }
 
+.centradoCaja {
+    display: flex;
+    justify-content: center;
+}
+
 .bordeBoton {
     @extend .borde;
     background-color: $naranja;
