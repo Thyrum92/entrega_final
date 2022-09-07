@@ -12,16 +12,17 @@ $naranja: darkorange;
     border-radius: 3px;
 }
 
-.centradoCaja {
-    display: flex;
-    justify-content: center;
-}
-
 .bordeBoton {
     @extend .borde;
     background-color: $naranja;
 }
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
+
+    .centradoCaja {
+        display: flex;
+        justify-content: center;
+        margin: 36.5px 0;
+    }
 
     /*** General - Header ***/
 
@@ -76,6 +77,12 @@ $naranja: darkorange;
        }
     }
 @media (min-width: 600px) and (max-width: 1199px) {
+
+    .centradoCaja {
+        display: flex;
+        justify-content: center;
+        margin: 7px 0;
+    }
 
 /*** General - Header ***/
   
@@ -132,6 +139,12 @@ $naranja: darkorange;
 }
 
 @media (min-width: 1200px) {
+
+    .centradoCaja {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+    }
 
 /*** General - Header ***/
 

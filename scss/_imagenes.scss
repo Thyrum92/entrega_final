@@ -13,6 +13,10 @@ $LargoImagenProd: 75px;
     border: solid $bordeNegro;
 }
 
+.banner {
+    width: 95%;
+}
+
 @media (max-width: 599px) {
 
 /*** Index ***/
@@ -26,10 +30,6 @@ $LargoImagenProd: 75px;
 .imgDim {
     width: $anchoImagenProd;
     height: $LargoImagenProd;
-}
-
-.banner {
-    width: 100%;
 }
 
 /*** Productos Sin Tacc ***/
@@ -76,10 +76,6 @@ $LargoImagenProd: 75px;
     height: $LargoImagenProd;
 }
 
-.banner {
-    width: 95%;
-}
-
 /*** Productos Sin Tacc ***/
 
 .imgProd {
@@ -122,10 +118,6 @@ $LargoImagenProd: 75px;
 .imgDim {
     width: $anchoImagenProd;
     height: $LargoImagenProd;
-}
-
-.banner {
-    width: 40%;
 }
 
 /*** Productos Sin Tacc ***/
